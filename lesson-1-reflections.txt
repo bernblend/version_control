@@ -30,10 +30,10 @@
 
 6. How might using version control make you more confident to make changes that could break something?
 
-    Fill in your answer here
+    Because you can always do a ...  git checkout <commit ID#>   ... on the file that was used before a bug was introduced.
 
 
 
 7. Now that you have your workspace set up, what do you want to try using Git for?
 
-    Fill in your answer here
+    To become a great Software Engineer with use of version control!!!

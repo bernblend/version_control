@@ -50,3 +50,10 @@ As a reminder, running git log will show a list of the recent commits with infor
 ********       Entering commit IDs
 
 If it is easier, you may enter the first four or more characters of the commit ID rather than pasting the entire ID.
+
+
+*********    Format of git checkout
+
+The command Caroline types to checkout the "Revert controls" commit is:
+
+git checkout <commit ID#>
