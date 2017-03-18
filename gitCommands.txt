@@ -1,0 +1,52 @@
+******   How to compare two files in BASH:
+
+diff -u first_file.java secondfile.java
+
+
+******   How to see all versions of git file
+
+*** when inside folder enter
+
+git log
+
+
+*** this shows stats of what files changed in each commit
+
+git log --stat
+
+
+******   Reviewing 2 versions of a file
+
+git diff (paste the two ID #'s for each file here)
+
+
+******   Cloning a Repository
+
+To clone a repository, run git clone followed by a space and the repository URL.
+
+
+********    Exiting git log
+
+To stop viewing git log output, press q (which stands for quit).
+
+
+**********      Getting Colored Output
+To get colored diff output, run:
+
+git config --global color.ui auto
+
+
+
+**********    Copying and Pasting from the Command Line
+
+To complete this quiz, you'll want to copy and paste some commit ids.
+
+
+**********   Using git log and git diff
+
+As a reminder, running git log will show a list of the recent commits with information about them, including commit IDs. Running git diff followed by two commit IDs will compare the two versions of the code in those commits.
+
+
+********       Entering commit IDs
+
+If it is easier, you may enter the first four or more characters of the commit ID rather than pasting the entire ID.
