@@ -54,6 +54,8 @@
 
 6. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
+  So that we can get two versions of a program on the same page and but still containing all of the changes that where made to both the programs or branches. Because it represents the best part of git which is its merging feature.
+
 
 
 

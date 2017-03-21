@@ -100,7 +100,9 @@ git checkout master       *****  Do this before staging anything!!
 
   Right now, your HEAD should still be      'detached' from Lesson 1 when you checked out an old commit. To fix that, run the command git checkout master
 
+git gc        Run Git's garbage collection.
 
+git branch       Shows current branch and available branches.
 
 ls -a     Shows all hidden files like .git
 
@@ -168,3 +170,45 @@ git log --graph --oneline              this does the same as above but
 git log --graph --oneline <branch 1> <branch 2>       this tells git
 
 what branches you want to visualize. changes made to <non-master> branch will appear with red lines next to them. Anything below this are before that branch was made and anything above are after that branch was merged to the master branch.
+
+
+
+
+*********    Merging branches
+
+When you use git to create a merge commit:
+1. It stores info. about both of its parents.
+2. It has access to all previous commits from the previous branches.
+
+You can merge and then delete (rename) the branch thats being merged.
+
+
+
+git merge <branch-1> <branch-2>        Creates a merge of the 2 branches.
+
+You are then prompted to the text editor where there is already a default commit message referring to the merge.
+
+
+
+git show <commit-ID#>        Shows the changes introduced in a commit
+
+ compared to its parent, without knowing who the parent is.
+
+
+
+ DELETE A BRANCH:
+
+ git branch -d <branch-1>             Deletes a branch. Do this after
+
+ the branch has been merged. This doesn't delete the commits on this branch, it will only delete the label. The commits are now accessible by the master branch.
+
+
+
+
+
+**********   REVIEW  OF MERGING   ***********
+
+1. make change to file and save it.
+2. git diff     to see changes to the file.
+3. git ass <file-1>     to add the changes.
+4. git commit             to commit these changes.
