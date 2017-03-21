@@ -85,3 +85,58 @@ git checkout will do this. It takes one argument - the commit ID to restore.
 Show the commits made in this repository, starting with the most recent.
 
 git log will do this. It doesn't take any arguments.
+
+
+
+
+
+
+
+
+************************* LESSON 2 COMMANDS   **************************
+
+
+git checkout master       *****  Do this before staging anything!!
+
+  Right now, your HEAD should still be      'detached' from Lesson 1 when you checked out an old commit. To fix that, run the command git checkout master
+
+
+
+ls -a     Shows all hidden files like .git
+
+git init     Initializes a new git repository
+
+git status     Shows which files changed since last commit
+
+git add       Adds files to a repository - Or adding to the staging area.
+
+git diff ID#1 ID#2      Diff on two commits
+
+git diff                 Shows changes made (no ID's - not commits)
+                       Compare between working directory and Staging area
+
+git diff --staged        Shows the changes in the staged area
+
+
+git reset --hard         Discards any changes in the working
+                         directory or the staging area.
+
+
+git commit            To commit wanted changes
+
+
+git checkout master
+
+  Right now, your HEAD should still be      'detached' from Lesson 1 when you checked out an old commit. To fix that, run the command git checkout master
+
+
+****************************************************
+
+
+
+git branch             Shows the current branch
+
+git branch easy-mode        easy-mode is argument & makes branch of this name
+
+
+git checkout easy-mode        Switches to easy-mode branch, changes will now be saved to this copy
