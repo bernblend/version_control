@@ -1,0 +1,61 @@
+1.What happens when you initialize a repository? Why do you need to do it?
+
+  An empty repository is created, which contains no commit. This is done so that it won't automatically include files you actually don't want to keep track of.
+
+
+2.How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+  Staging area is the preparation area for files to be committed. Only files in this area are going to be included in the commit executed next time. It helps to divide changes in the working directory into several commits, each of which consists of a group of changes that represent a logical change to the relevant files.
+
+
+
+3. How can you use the staging area to make sure you have one commit per logical change?
+
+  This allows you to place changes in a state of readiness so that the following commit confirmation can make the desired changes to all of the required files.
+
+
+
+4. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+  Branches can be helpful if I want to make an experimental version of my program. This will allow me to have multiple versions of my code. A new branch should be made for each feature or bug fix and then merge that branch with the master branch.
+
+
+
+
+*************************************
+  You are in 'detached HEAD state' when you check out a commit. Changes that are committed don't show up on any branch, does not come up on git log, and is considered 'unreachable'. To create a new branch to retain the commits you create you used the following:
+**************************************** THIS IS WHAT YOU USE WHENEVER YOU'RE WORKING ON A NEW FEATURE OR FIXING A BUG (THAT IS WHY IT DOES 2 COMMANDS IN ONE):
+
+
+  git checkout -b <new-branch-name>
+
+
+
+  ***The above command is like 2 commands:
+
+  git branch new_branch_name
+  git checkout new_branch_name
+
+*************************************
+  If you check out a branch instead, then the commit referred to above would have never existed. BUT IF YOU DO ANY OF THE ABOVE COMMANDS YOU WILL START A BRANCH FROM WHERE THAT COMMIT IS AT. Any new commits would be on the new branch.
+
+  NOTE: making new commits brings the branch with us.
+
+
+
+
+
+5. How do the diagrams help you visualize the branch structure?
+
+  It allows me to see how the branches grow with time and what the differences between 'checkout commits' vs 'checkout branches' look like relative to the master branch as well as other branches.
+
+
+
+
+6. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+
+
+
+
+7. What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges manually?

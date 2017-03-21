@@ -139,4 +139,32 @@ git branch             Shows the current branch
 git branch easy-mode        easy-mode is argument & makes branch of this name
 
 
-git checkout easy-mode        Switches to easy-mode branch, changes will now be saved to this copy
+git checkout easy-mode        Switches to easy-mode branch, changes will
+
+                                    now be saved to this copy
+
+
+git checkout <commit name>           Checkout a branch
+
+Branch coins set up to track remote branch coins from origin.
+Switched to a new branch 'coins'
+
+
+The above message means that branch 'coins' is 'remote', which means someones has created this branch.
+
+
+git log --graph              provides graph to visualize the branch
+
+                             structure
+
+
+
+git log --graph --oneline              this does the same as above but
+
+                                       makes it easier to see the branches.
+
+
+
+git log --graph --oneline <branch 1> <branch 2>       this tells git
+
+what branches you want to visualize. changes made to <non-master> branch will appear with red lines next to them. Anything below this are before that branch was made and anything above are after that branch was merged to the master branch.
