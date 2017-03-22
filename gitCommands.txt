@@ -381,3 +381,5 @@ git log -n1       Shows only the last commit (mine showed no conflict)
 
 
 Staging Area Video: https://youtu.be/stetldMDE80
+
+Lesson 2 Summary Video:   https://youtu.be/CBYQDIqucxE
