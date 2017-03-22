@@ -60,4 +60,8 @@
 
 
 
-7. What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges manually?
+7. What are the pros and cons of Github's automatic merging vs. always doing merges manually?
+
+  The pros are that it is very time efficient and well organized. The cons are that whenever there is any ambiguity regarding what code should remain, git will always ask you. However, I don't find this horrible just yet.
+
+  

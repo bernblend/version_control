@@ -328,3 +328,56 @@ Now you would review to see what changes they tried to make. Here there is a fun
 
 
 Now just make the appropriated changes and remove the special characters from git.   <<<<<<<<<<<<   &    ===============
+
+then save the file.
+Now run    git status and you will see    BOTH modified to game.js        shown below:
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   game.js
+
+
+Now we have resolved the conflict, so we add the file to the staging area with:
+
+git add game.js
+
+now:
+
+git status
+
+and this shows conflicts fixed but we are STILL MERGING.
+
+OUTPUT:
+bernblend (easy-mode +|MERGING) asteroids $ git status
+On branch easy-mode
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   game.js
+
+++++++++++++++++++++++++++++++++++++++++++
+
+
+As shown:
+
+enter:
+
+git commit
+
+to complete the merge.
+
+NOTE: there is only one commit and no conflict resolution.
+
+
+
+
+NOTE:
+
+git log -n1       Shows only the last commit (mine showed no conflict)
+
+
+
+Staging Area Video: https://youtu.be/stetldMDE80
