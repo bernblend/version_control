@@ -15,14 +15,22 @@ git log
 git log --stat
 
 
+
+
 ******   Reviewing 2 versions of a file
 
 git diff (paste the two ID #'s for each file here)
 
 
+
+
 ******   Cloning a Repository
 
-To clone a repository, run git clone followed by a space and the repository URL.
+To clone a repository, run:
+
+git clone <repsoiroty-URL>
+
+
 
 
 ********    Exiting git log
@@ -37,9 +45,14 @@ git config --global color.ui auto
 
 
 
+
+
 **********    Copying and Pasting from the Command Line
 
 To complete this quiz, you'll want to copy and paste some commit ids.
+
+
+
 
 
 **********   Using git log and git diff
@@ -47,9 +60,15 @@ To complete this quiz, you'll want to copy and paste some commit ids.
 As a reminder, running git log will show a list of the recent commits with information about them, including commit IDs. Running git diff followed by two commit IDs will compare the two versions of the code in those commits.
 
 
+
+
+
 ********       Entering commit IDs
 
 If it is easier, you may enter the first four or more characters of the commit ID rather than pasting the entire ID.
+
+
+
 
 
 *********    Format of git checkout
@@ -206,9 +225,106 @@ git show <commit-ID#>        Shows the changes introduced in a commit
 
 
 
-**********   REVIEW  OF MERGING   ***********
+**********   REVIEW  OF COMMIT   ***********
 
 1. make change to file and save it.
 2. git diff     to see changes to the file.
-3. git ass <file-1>     to add the changes.
+3. git add <file-1>     to add the changes.
 4. git commit             to commit these changes.
+
+
+
+
+
+
+
+referring to easy-mode branch created in tutorial:
+
+Motivation:
+Master has updated since the easy-mode branch was created. In this case, it has the addition of coins, which you might like to include in the easy-mode branch. In general, it’s very common that if you make a branch, either an experimental branch or to work on a new feature, you want to periodically merge master into that branch. This is because master usually contains the official version of the code, and it’s common to want experimental changes to include all of the changes to master.
+
+
+Merging two branches (Master and other) diagram video here:
+https://youtu.be/e4iPtFApdsI
+
+
+
+
+**********   REVIEW  OF MERGE   ***********
+
+We don't want to include the easy-mode (branch) to our game in master. However WE DO want to include all the latest changes from Master to our easy-mode branch.        Note: easy-mode is the branch name
+
+Do this:
+
+1. git checkout easy-mode      (easy-mode will now UPDATE saved changes)
+2. git merge master easy-mode      This will merge but also creates a                                   conflict in this case as both people changed the same line in the code.
+
+********  OUTPUT:
+bernblend (easy-mode) asteroids $ git merge master easy-mode
+Auto-merging game.js
+CONFLICT (content): Merge conflict in game.js
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+To resolve this issue anytime (and it will always happen) open the file, in this case game.js and look for a row of less than symbols that git has provided.
+
+Found in code:
+
+
+<<<<<<< HEAD
+      // break into fragments
+      for (var i = 0; i < 2; i++) {
+        var roid = $.extend(true, {}, this);
+        roid.vel.x = Math.random() * 6 - 3;
+        roid.vel.y = Math.random() * 6 - 3;
+        if (Math.random() > 0.5) {
+          roid.points.reverse();
+        }
+        roid.vel.rot = Math.random() * 2 - 1;
+        roid.move(roid.scale * 3); // give them a little push
+        Game.sprites.push(roid);
+      }
+=======
+      this.breakIntoFragments();
+>>>>>>> master
+}
+Game.explosionAt(other.x, other.y);
+this.die();
+};
+};
+Asteroid.prototype = new Sprite();
+
+Coin = function () {
+this.init("coin",
+        [-5,  0,
+          0,  5,
+          5,  0,
+          0, -5]);
+
+
+
+
+Above you can the parts:
+<<<<<<< HEAD
+=======
+and >>>>>>> master
+
+
+
+<<<<<<< HEAD
+
+Represents our code. Changes we made.
+
+
+=========
+
+The other person's code. Here is the code creating the conflict with ours.
+
+>>>>>>> master
+
+
+
+Now you would review to see what changes they tried to make. Here there is a function created by the other person.
+
+
+Now just make the appropriated changes and remove the special characters from git.   <<<<<<<<<<<<   &    ===============
